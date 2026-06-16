@@ -5,7 +5,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <PackageId>GameMode.Common</PackageId>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>David Román Amariles</Authors>
     <Copyright>David Román Amariles</Copyright>
     <PackageProjectUrl>https://github.com/DevD4v3/GameMode.Common</PackageProjectUrl>
