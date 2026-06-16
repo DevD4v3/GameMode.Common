@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/GameMode.Common.csproj" />
+  <Project Path="tests/GameMode.Common.Tests.csproj" Id="3275b270-2b77-49ff-a213-446f5d7df7bf" />
+</Solution>
