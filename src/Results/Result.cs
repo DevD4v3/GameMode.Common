@@ -5,10 +5,13 @@
 /// </summary>
 public ref struct Result
 {
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Result"/> struct.
+    /// </summary>
     public Result() { }
 
     /// <summary>
-    /// Gets the description of a result.
+    /// Gets an optional message associated with the result.
     /// </summary>
     public string Message { get; private set; } = string.Empty;
 
@@ -22,13 +25,29 @@ public ref struct Result
     /// </summary>
     public bool IsFailed => !IsSuccess;
 
+    /// <summary>
+    /// Creates a successful result.
+    /// </summary>
     public static Result Success() => new() { IsSuccess = true };
+
+    /// <summary>
+    /// Creates a successful result with an associated message.
+    /// </summary>
+    /// <param name="message">The message associated with the result.</param>
     public static Result Success(string message) => new() 
     { 
         IsSuccess = true,
         Message = message 
     };
 
+    /// <summary>
+    /// Creates a failed result.
+    /// </summary>
     public static Result Failure() => new();
+
+    /// <summary>
+    /// Creates a failed result with an associated message.
+    /// </summary>
+    /// <param name="message">The message associated with the result.</param>
     public static Result Failure(string message) => new() { Message = message };
 }

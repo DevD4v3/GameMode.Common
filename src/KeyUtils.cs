@@ -1,42 +1,32 @@
 ﻿namespace GameMode.Common;
 
 /// <summary>
-/// Contains methods to check for keypresses.
+/// Provides helper methods for detecting key state transitions.
 /// </summary>
 public static class KeyUtils
 {
     /// <summary>
-    /// Checks if <see cref="Keys" /> have been pressed.
+    /// Determines whether the specified keys were pressed.
     /// </summary>
-    /// <param name="newKeys">
-    /// New <see cref="Keys" />.
-    /// </param>
-    /// <param name="oldKeys">
-    /// Old <see cref="Keys" />.
-    /// </param>
-    /// <param name="keys">
-    /// The <see cref="Keys" /> to check for.
-    /// </param>
+    /// <param name="newKeys">The current key state.</param>
+    /// <param name="oldKeys">The previous key state.</param>
+    /// <param name="keys">The keys to evaluate.</param>
     /// <returns>
-    /// Whether the <see cref="Keys" /> have been pressed.
+    /// <see langword="true"/> if the specified keys were pressed;
+    /// otherwise, <see langword="false"/>.
     /// </returns>
     public static bool HasPressed(Keys newKeys, Keys oldKeys, Keys keys)
         => newKeys.HasFlag(keys) && !oldKeys.HasFlag(keys);
 
     /// <summary>
-    /// Checks if <see cref="Keys" /> have been released.
+    /// Determines whether the specified keys were released.
     /// </summary>
-    /// <param name="newKeys">
-    /// New <see cref="Keys" />.
-    /// </param>
-    /// <param name="oldKeys">
-    /// Old <see cref="Keys" />.
-    /// </param>
-    /// <param name="keys">
-    /// The <see cref="Keys" /> to check for.
-    /// </param>
+    /// <param name="newKeys">The current key state.</param>
+    /// <param name="oldKeys">The previous key state.</param>
+    /// <param name="keys">The keys to evaluate.</param>
     /// <returns>
-    /// Whether the <see cref="Keys" /> have been released.
+    /// <see langword="true"/> if the specified keys were released;
+    /// otherwise, <see langword="false"/>.
     /// </returns>
     public static bool HasReleased(Keys newKeys, Keys oldKeys, Keys keys)
         => !newKeys.HasFlag(keys) && oldKeys.HasFlag(keys);

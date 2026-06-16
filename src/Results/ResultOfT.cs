@@ -7,6 +7,10 @@
 public ref struct Result<TValue>
 {
     private TValue _value;
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Result"/> struct.
+    /// </summary>
     public Result() { }
 
     /// <summary>
@@ -30,7 +34,7 @@ public ref struct Result<TValue>
     }
 
     /// <summary>
-    /// Gets the description of a result.
+    /// Gets an optional message associated with the result.
     /// </summary>
     public string Message { get; private set; } = string.Empty;
 
@@ -44,12 +48,21 @@ public ref struct Result<TValue>
     /// </summary>
     public bool IsFailed => !IsSuccess;
 
+    /// <summary>
+    /// Creates a successful result containing the specified value.
+    /// </summary>
+    /// <param name="value">The value associated with the result.</param>
     public static Result<TValue> Success(TValue value) => new() 
     { 
         IsSuccess = true,
         Value = value 
     };
 
+    /// <summary>
+    /// Creates a successful result containing the specified value and message.
+    /// </summary>
+    /// <param name="value">The value associated with the result.</param>
+    /// <param name="message">The message associated with the result.</param>
     public static Result<TValue> Success(TValue value, string message) => new()
     {
         IsSuccess = true,
@@ -57,6 +70,15 @@ public ref struct Result<TValue>
         Message = message
     };
 
+
+    /// <summary>
+    /// Creates a failed result.
+    /// </summary>
     public static Result<TValue> Failure() => new();
+
+    /// <summary>
+    /// Creates a failed result with an associated message.
+    /// </summary>
+    /// <param name="message">The message associated with the result.</param>
     public static Result<TValue> Failure(string message) => new() { Message = message };
 }
