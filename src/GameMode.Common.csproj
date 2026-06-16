@@ -4,7 +4,25 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
+    <PackageId>GameMode.Common</PackageId>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>David Román Amariles</Authors>
+    <Copyright>David Román Amariles</Copyright>
+    <PackageProjectUrl>https://github.com/DevD4v3/GameMode.Common</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/DevD4v3/GameMode.Common</RepositoryUrl>
+    <PackageTags>gta, samp, sampsharp</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <Description>Reusable utilities and abstractions for Open Multiplayer gamemodes built with SampSharp.</Description>
+    <Version>1.0.0</Version>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="True" PackagePath="" />
+    <None Include="..\LICENSE" Pack="True" PackagePath="" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="SampSharp.OpenMp.Entities" Version="1.0.0-prerelease2" />
