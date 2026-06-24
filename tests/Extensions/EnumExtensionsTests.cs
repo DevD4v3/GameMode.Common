@@ -22,6 +22,29 @@ public class EnumExtensionsTests
         action.Should()
             .Throw<InvalidOperationException>()
             .WithMessage(
-                $"Enum value '{TestEnum.Second}' is missing a {nameof(System.ComponentModel.DescriptionAttribute)}.");
+                $"Enum value '{TestEnum.Second}' is missing a {nameof(DescriptionAttribute)}.");
+    }
+
+    [Test]
+    public void GetDisplayName_WhenEnumValueHasDisplayName_ShouldReturnDisplayName()
+    {
+        // Act
+        string displayName = TestEnum.First.GetDisplayName();
+
+        // Assert
+        displayName.Should().Be("First Value");
+    }
+
+    [Test]
+    public void GetDisplayName_WhenEnumValueHasNoDisplayName_ShouldThrowInvalidOperationException()
+    {
+        // Act
+        Action action = () => TestEnum.Second.GetDisplayName();
+
+        // Assert
+        action.Should()
+            .Throw<InvalidOperationException>()
+            .WithMessage(
+                $"Enum value '{TestEnum.Second}' is missing a {nameof(DisplayNameAttribute)}.");
     }
 }

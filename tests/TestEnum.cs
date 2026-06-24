@@ -2,7 +2,8 @@
 
 public enum TestEnum
 {
-    [System.ComponentModel.Description("First Value")]
+    [DisplayName("First Value")]
+    [Description("First Value")]
     First,
     Second
 }
