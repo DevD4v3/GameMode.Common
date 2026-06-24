@@ -1,6 +1,6 @@
 ﻿namespace GameMode.Common.Tests.Extensions;
 
-public class EnumExtensions
+public class EnumExtensionsTests
 {
     [Test]
     public void GetDescription_WhenEnumValueHasDescription_ShouldReturnDescription()
