@@ -53,6 +53,11 @@ public class WeaponDefinitions
     public static readonly IWeapon TearGas          = new GtaWeapon(Weapon.Teargas, "Tear Gas", 8);
     public static readonly IWeapon Molotov          = new GtaWeapon(Weapon.Moltov, "Molotov Cocktail", 8);
     public static readonly IWeapon SatchelCharge    = new GtaWeapon(Weapon.SatchelCharge, "Satchel Charge", 8);
+    public static readonly IWeapon Detonator        = new GtaWeapon(Weapon.Detonator, 12);
+
+    public static readonly IWeapon Spraycan         = new GtaWeapon(Weapon.Spraycan, 9);
+    public static readonly IWeapon FireExtinguisher = new GtaWeapon(Weapon.FireExtinguisher, "Fire Extinguisher", 9);
+    public static readonly IWeapon Camera           = new GtaWeapon(Weapon.Camera, 9);
 
     private class GtaWeapon : IWeapon
     {
