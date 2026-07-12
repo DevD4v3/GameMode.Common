@@ -13,7 +13,9 @@
     <PackageTags>gta, samp, sampsharp</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
-    <Description>Reusable utilities and abstractions for Open Multiplayer gamemodes built with SampSharp.</Description>
+    <Description>
+      Reusable utilities and abstractions for open.mp (Open Multiplayer, a multiplayer mod for GTA San Andreas) game modes built with C# and SampSharp.
+    </Description>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
